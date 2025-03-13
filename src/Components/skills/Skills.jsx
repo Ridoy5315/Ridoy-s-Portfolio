@@ -13,121 +13,121 @@ import mongoose from "../../assets/learningTech/mongoose.png";
 import chinese from "../../assets/additionSkills/china.svg";
 const Skills = () => {
   return (
-    <div className="w-8/12 mx-auto mt-36">
-      <h3 className="text-center text-3xl font-semibold font-fontHeading text-primary-color">
+    <div id='skills' className="lg:w-8/12 md:w-10/12 w-11/12 mx-auto lg:mt-56 md:mt-24 mt-16">
+      <h3 className="text-center lg:text-3xl md:text-3xl text-2xl font-semibold font-fontHeading text-primary-color">
         Skills
       </h3>
-      <div className="mt-12 space-y-10">
+      <div className="lg:mt-12 md:mt-8 mt-6 lg:space-y-10 md:space-y-6 space-y-4">
         <div>
-          <h4 className="text-xl font-medium font-fontBody text-primary-color">
+          <h4 className="lg:text-xl md:text-lg font-medium font-fontBody text-primary-color">
             Tech Stack I Work With :{" "}
           </h4>
-          <div className="mt-5 text-secondary-color grid grid-cols-4 gap-6">
-            <div className="flex flex-col gap-4">
+          <div className="lg:mt-5 md:mt-3 mt-2 text-secondary-color grid grid-cols-4 lg:gap-6 md:gap-5 gap-3">
+            <div className="flex flex-col lg:gap-4 md:gap-3">
               <div className="flex flex-col justify-center items-center gap-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-                <div className="h-10">
+                <div className="lg:h-10 md:h-9 h-7">
                   <img className="h-full" src={html} alt="" />
                 </div>
-                <p className="text-sm">HTML</p>
+                <p className="lg:text-sm md:text-sm text-xs">HTML</p>
               </div>
               <div className="flex flex-col justify-center items-center gap-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-                <div className="h-10">
+                <div className="lg:h-10 md:h-9 h-7">
                   <img className="h-full" src={react} alt="" />
                 </div>
-                <p className="text-sm">REACT</p>
+                <p className="lg:text-sm md:text-sm text-xs">REACT</p>
               </div>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col lg:gap-4 md:gap-3">
               <div className="flex flex-col justify-center items-center gap-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-                <div className="h-10">
+                <div className="lg:h-10 md:h-9 h-7">
                   <img className="h-full" src={css} alt="" />
                 </div>
-                <p className="text-sm">CSS</p>
+                <p className="lg:text-sm md:text-sm text-xs">CSS</p>
               </div>
               <div className="flex flex-col justify-center items-center gap-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-                <div className="h-10">
+                <div className="lg:h-10 md:h-9 h-7">
                   <img className="h-full" src={firebase} alt="" />
                 </div>
-                <p className="text-sm">FIREBASE</p>
+                <p className="lg:text-sm md:text-sm text-xs">FIREBASE</p>
               </div>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col lg:gap-4 md:gap-3">
               <div className="flex flex-col justify-center items-center gap-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-                <div className="h-10">
+                <div className="lg:h-10 md:h-9 h-7">
                   <img className="h-full" src={tailwind} alt="" />
                 </div>
-                <p className="text-sm">TAILWIND</p>
+                <p className="lg:text-sm md:text-sm text-xs">TAILWIND</p>
               </div>
               <div className="flex flex-col justify-center items-center gap-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-                <div className="h-10">
+                <div className="lg:h-10 md:h-9 h-7">
                   <img className="h-full" src={node} alt="" />
                 </div>
-                <p className="text-sm">NODE</p>
+                <p className="lg:text-sm md:text-sm text-xs">NODE</p>
               </div>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col lg:gap-4 md:gap-3">
               <div className="flex flex-col justify-center items-center gap-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-                <div className="h-10">
+                <div className="lg:h-10 md:h-9 h-7">
                   <img className="h-full" src={javascript} alt="" />
                 </div>
-                <p className="text-sm">JAVASCRIPT</p>
+                <p className="lg:text-sm md:text-sm text-xs">JAVASCRIPT</p>
               </div>
               <div className="flex flex-col justify-center items-center gap-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-                <div className="h-10">
+                <div className="lg:h-10 md:h-9 h-7">
                   <img className="h-full" src={mongodb} alt="" />
                 </div>
-                <p className="text-sm">MONGODB</p>
+                <p className="lg:text-sm md:text-sm text-xs">MONGODB</p>
               </div>
             </div>
           </div>
         </div>
         <div>
-          <h4 className="text-xl font-medium font-fontBody text-primary-color">
+          <h4 className="lg:text-xl md:text-lg font-medium font-fontBody text-primary-color">
             New Technologies I'm Learning :{" "}
           </h4>
-          <div className="mt-5 text-secondary-color grid grid-cols-2 gap-16">
-            <div className="flex flex-col gap-4">
+          <div className="lg:mt-5 md:mt-3 mt-2 text-secondary-color grid grid-cols-2 lg:gap-16 md:gap-16 gap-10">
+            <div className="flex flex-col lg:gap-4 md:gap-3">
               <div className="flex flex-col justify-center items-center gap-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-                <div className="h-10">
+                <div className="lg:h-10 md:h-9 h-7">
                   <img className="h-full" src={typescript} alt="" />
                 </div>
-                <p className="text-sm">TYPESCRIPT</p>
+                <p className="lg:text-sm md:text-sm text-xs">TYPESCRIPT</p>
               </div>
               <div className="flex flex-col justify-center items-center gap-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-                <div className="h-10">
+                <div className="lg:h-10 md:h-9 h-7">
                   <img className="h-full" src={mongodb} alt="" />
                 </div>
-                <p className="text-sm">MONGODB</p>
+                <p className="lg:text-sm md:text-sm text-xs">MONGODB</p>
               </div>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col lg:gap-4 md:gap-3">
               <div className="flex flex-col justify-center items-center gap-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-                <div className="h-10">
+                <div className="lg:h-10 md:h-9 h-7">
                   <img className="h-full" src={express} alt="" />
                 </div>
-                <p className="text-sm">EXPRESS</p>
+                <p className="lg:text-sm md:text-sm text-xs">EXPRESS</p>
               </div>
               <div className="flex flex-col justify-center items-center gap-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-                <div className="h-10">
+                <div className="lg:h-10 md:h-9 h-7">
                   <img className="h-full" src={mongoose} alt="" />
                 </div>
-                <p className="text-sm">MONGOOSE</p>
+                <p className="lg:text-sm md:text-sm text-xs">MONGOOSE</p>
               </div>
             </div>
           </div>
         </div>
         <div>
-          <h4 className="text-xl font-medium font-fontBody text-primary-color">
+          <h4 className="lg:text-xl md:text-lg font-medium font-fontBody text-primary-color">
             Additional Skills :{" "}
           </h4>
           <div className="grid grid-cols-2">
             <div className="space-y-3 hover:bg-[#ecf8f6] p-4 rounded-lg hover:text-accent-color hover:font-semibold transition duration-300 ease-in-out">
-              <div className="h-10 flex justify-center">
+              <div className="lg:h-10 md:h-9 h-7 flex justify-center">
                 <img className="h-full" src={chinese} alt="" />
               </div>
               <div className="flex flex-col justify-center items-center">
                 <p className="text-xs">CHINESE</p>
-                <p className="text-sm">HSK</p>
+                <p className="lg:text-sm md:text-sm text-xs">HSK</p>
               </div>
             </div>
           </div>

@@ -5,10 +5,10 @@ import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 const Banner = () => {
   return (
-    <div className="flex justify-between items-center gap-36 w-11/12 mx-auto pt-36 pb-10">
-      <div className="flex gap-16 items-center">
+    <div id='home' className="flex lg:flex-row md:flex-row flex-col-reverse justify-between items-center lg:gap-36 md:gap-12 gap-8 w-11/12 mx-auto lg:pt-36 md:pt-32 pt-24 pb-10">
+      <div className="flex lg:gap-16 md:gap-8 items-center">
         {/* social icon */}
-        <div className="space-y-8 text-2xl text-primary-color">
+        <div className="space-y-8 lg:block md:block hidden lg:text-2xl md:text-xl text-primary-color">
           <div>
             <a href="https://www.linkedin.com/in/ridoy5315">
               <FaLinkedin></FaLinkedin>
@@ -30,26 +30,48 @@ const Banner = () => {
             </a>
           </div>
         </div>
-        <div className="space-y-10">
-          <p className="text-2xl font-fontBody font-semibold text-primary-color">
+        <div className="lg:space-y-10 md:space-y-6 space-y-4">
+          <p className="lg:text-2xl md:text-xl text-sm font-fontBody font-semibold text-primary-color">
             Hi There, I'm
           </p>
           <div>
-            <h3 className="text-5xl font-semibold font-fontHeading text-primary-color">
+            <h3 className="lg:text-5xl md:text-[28px] text-2xl font-semibold font-fontHeading text-primary-color">
               Md Mahbubul Islam <span className="text-accent-color">Ridoy</span>
             </h3>
-            <div className="flex gap-2 font-fontBody text-xl font-semibold text-secondary-color">
+            <div className="flex gap-2 font-fontBody lg:text-xl md:text-sm text-[10px] font-semibold text-secondary-color">
               <h5>Junior Web Developer</h5>
               <h5>||</h5>
               <h5>Front-end Developer</h5>
             </div>
           </div>
-          <p className="text-secondary-color text-sm">
+          <p className="text-secondary-color lg:text-sm text-[10px]">
             Passionate about building modern, responsive, and user-friendly web
             applications. Constantly learning and improving to create seamless
             digital experiences.
           </p>
-          <button className="text-xl bg-gradient-to-r from-accent-color via-[#009c8e] to-[#008579] text-white px-6 py-1 rounded-lg hover:ring-4 ring-[#008579] transition duration-300 ease-in-out">
+          <div className="flex gap-3 lg:hidden md:hidden block lg:text-2xl md:text-xl text-primary-color">
+          <div>
+            <a href="https://www.linkedin.com/in/ridoy5315">
+              <FaLinkedin></FaLinkedin>
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/Ridoy5315">
+              <FaGithub></FaGithub>
+            </a>
+          </div>
+          <div>
+            <a href="https://twitter.com/@MIRidoy99">
+              <FaXTwitter></FaXTwitter>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/ridoy5287">
+              <FaFacebook></FaFacebook>
+            </a>
+          </div>
+        </div>
+          <button className="lg:text-xl md:text-xl  bg-gradient-to-r from-accent-color via-[#009c8e] to-[#008579] text-white px-6 lg:py-1 md:py-1 py-0.5 rounded-lg hover:ring-4 ring-[#008579] transition duration-300 ease-in-out">
             Resume
           </button>
         </div>
@@ -64,5 +86,6 @@ const Banner = () => {
     </div>
   );
 };
+
 
 export default Banner;
