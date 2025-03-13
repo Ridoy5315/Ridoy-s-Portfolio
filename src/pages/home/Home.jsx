@@ -3,13 +3,15 @@ import AboutMe from '../../Components/about/AboutMe';
 import Skills from '../../Components/skills/Skills';
 import Education from '../../Components/education/Education';
 import Projects from '../../Components/projects/Projects';
+import ContactInformation from '../../Components/Contact/ContactInformation';
 
 const Home = () => {
      return (
-          <div>
+          <div className=''>
                <AboutMe></AboutMe>
                <Skills></Skills>
                <Projects></Projects>
+               <ContactInformation></ContactInformation>
                
           </div>
      );
