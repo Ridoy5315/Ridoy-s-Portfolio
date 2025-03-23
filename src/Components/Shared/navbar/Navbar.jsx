@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../../assets/logo.png";
 import { NavLink, useNavigate } from "react-router-dom";
+import ResumeModal from "../resumeModal/ResumeModal";
+import useLanguage from "../../../hooks/useLanguage";
 const Navbar = () => {
+  const { language, changeLanguage } = useLanguage();
+  const [isOpen, setIsOpen] = useState(false);
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -12,17 +16,26 @@ const Navbar = () => {
     <nav>
       <ul className="flex lg:flex-row flex-col justify-center items-center lg:gap-8 md:gap-3 gap-2 font-fontHeading font-medium text-lg ">
         <li>
-          <NavLink onClick={() => scrollToSection ("home")} className=" transition duration-300 ease-in-out text-primary-color hover:text-accent-color hover:font-bold bg-transparent">
+          <NavLink
+            onClick={() => scrollToSection("home")}
+            className=" transition duration-300 ease-in-out text-primary-color hover:text-accent-color hover:font-bold bg-transparent"
+          >
             <a href="">Home</a>
           </NavLink>
         </li>
         <li>
-          <NavLink onClick={() => scrollToSection ("about-me")} className=" transition duration-300 ease-in-out text-primary-color hover:text-accent-color hover:font-bold bg-transparent">
+          <NavLink
+            onClick={() => scrollToSection("about-me")}
+            className=" transition duration-300 ease-in-out text-primary-color hover:text-accent-color hover:font-bold bg-transparent"
+          >
             <a href="">About Me</a>
           </NavLink>
         </li>
         <li>
-          <NavLink onClick={() => scrollToSection ("skills")} className=" transition duration-300 ease-in-out text-primary-color hover:text-accent-color hover:font-bold bg-transparent">
+          <NavLink
+            onClick={() => scrollToSection("skills")}
+            className=" transition duration-300 ease-in-out text-primary-color hover:text-accent-color hover:font-bold bg-transparent"
+          >
             <a href="">Skills</a>
           </NavLink>
         </li>
@@ -32,12 +45,18 @@ const Navbar = () => {
           </NavLink>
         </li> */}
         <li>
-          <NavLink onClick={() => scrollToSection ("projects")} className=" transition duration-300 ease-in-out text-primary-color hover:text-accent-color hover:font-bold bg-transparent">
+          <NavLink
+            onClick={() => scrollToSection("projects")}
+            className=" transition duration-300 ease-in-out text-primary-color hover:text-accent-color hover:font-bold bg-transparent"
+          >
             <a href="">Projects</a>
           </NavLink>
         </li>
         <li>
-          <NavLink onClick={() => scrollToSection ("contact-information")} className="hover:bg-none transition duration-300 ease-in-out text-primary-color hover:text-accent-color hover:font-bold bg-transparent">
+          <NavLink
+            onClick={() => scrollToSection("contact-information")}
+            className="hover:bg-none transition duration-300 ease-in-out text-primary-color hover:text-accent-color hover:font-bold bg-transparent"
+          >
             <a href="">Contact</a>
           </NavLink>
         </li>
@@ -77,9 +96,18 @@ const Navbar = () => {
             <div className="h-10">
               <img className="h-full w-full" src={logo} alt="" />
             </div>
-            <h2 className="text-3xl text-accent-color font-bold font-fontHeading">
-              Ri<span className="text-primary-color font-medium">doy</span>
-            </h2>
+            <div className="flex items-center gap-2">
+              <h2 className="text-3xl text-accent-color font-bold font-fontHeading">
+                Ri<span className="text-primary-color font-medium">doy</span>
+              </h2>
+              {language === "en" ? (
+                ""
+              ) : (
+                <h2 className="text-xl text-accent-color font-bold">
+                  (李<span className="text-primary-color font-medium">道)</span>
+                </h2>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -97,9 +125,38 @@ const Navbar = () => {
         <div className=" hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <button className=" bg-gradient-to-r from-accent-color via-[#009c8e] to-[#008579] text-white px-3 lg:text-lg md:text-base text-sm py-0.5 rounded-lg hover:ring-4 ring-[#008579] transition duration-300 ease-in-out">
-          Resume
-        </button>
+        <div className="flex items-center gap-6">
+          <div className="flex items-center border-2 rounded-md py-0.5 px-1 border-accent-color">
+            <button
+              onClick={changeLanguage}
+              className={`text-sm px-1 transition duration-200 ease-in-out ${
+                language === "en"
+                  ? "bg-accent-color rounded text-white"
+                  : " text-accent-color font-medium"
+              }`}
+            >
+              EN
+            </button>
+            <div className="divider divider-horizontal mx-0"></div>
+            <button
+              onClick={changeLanguage}
+              className={`text-sm px-1 transition duration-200 ease-in-out ${
+                language === "zh"
+                  ? "bg-accent-color rounded text-white"
+                  : " text-accent-color font-medium"
+              }`}
+            >
+              CN
+            </button>
+          </div>
+          <button
+            onClick={() => setIsOpen(true)}
+            className=" bg-gradient-to-r from-accent-color via-[#009c8e] to-[#008579] text-white px-3 lg:text-lg md:text-base text-sm py-0.5 rounded-lg hover:ring-4 ring-[#008579] transition duration-300 ease-in-out"
+          >
+            Resume
+          </button>
+          {isOpen && <ResumeModal setIsOpen={setIsOpen}></ResumeModal>}
+        </div>
       </div>
     </div>
   );
